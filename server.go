@@ -4,6 +4,8 @@ import (
 	"OlympApi/api"
 	"fmt"
 	"net/http"
+
+	"google.golang.org/appengine"
 )
 
 func main() {
@@ -17,6 +19,7 @@ func main() {
 	if err := http.ListenAndServeTLS(":8443", "cert.pem", "key.pem", api); err != nil {
 		fmt.Println(err)
 	}
+	appengine.Main()
 }
 
 func redirectToHTTPS(wr http.ResponseWriter, r *http.Request) {
