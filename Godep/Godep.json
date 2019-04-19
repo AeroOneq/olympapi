@@ -1,0 +1,29 @@
+{
+	"ImportPath": "OlympApi",
+	"GoVersion": "go1.12",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "Olympapi/database",
+			"Rev": "7798549fe90daf91a99102b13b1d4ca4ad755bb9"
+		},
+		{
+			"ImportPath": "Olympapi/handlers",
+			"Rev": "7798549fe90daf91a99102b13b1d4ca4ad755bb9"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/inject",
+			"Comment": "v1.0-rc1-10-g33e0aa1",
+			"Rev": "33e0aa1cb7c019ccc3fbe049a8262a6403d30504"
+		},
+		{
+			"ImportPath": "github.com/go-martini/martini",
+			"Comment": "v1.0-188-g22fa469",
+			"Rev": "22fa46961aabd2665cf3f1343b146d20028f5071"
+		},
+		{
+			"ImportPath": "github.com/martini-contrib/secure",
+			"Rev": "de8e19a0490b816696d093388d53f2e1f0c08b7d"
+		}
+	]
+}
