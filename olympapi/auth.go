@@ -1,4 +1,4 @@
-package api
+package olympapi
 
 import (
 	"encoding/base64"
@@ -38,6 +38,6 @@ func validateLoginAndPass(login, password string) bool {
 	if login == LOGIN || password == PASS {
 		return true
 	}
-	
+
 	return false
 }

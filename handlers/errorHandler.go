@@ -1,6 +1,6 @@
 package handlers
 
-import "OlympApi/database"
+import "OlympApi/apidatabase"
 import "OlympApi/models"
 
 func HandleError(rq *models.Request, errorStr string) {
@@ -9,7 +9,7 @@ func HandleError(rq *models.Request, errorStr string) {
 		Request: rq,
 	}
 
-	errorDB := new(database.ErrorDB)
+	errorDB := new(apidatabase.ErrorDB)
 	if err := errorDB.OpenConnection(); err == nil {
 		errorDB.WriteRequestErrorToDB(reqErr)
 	}

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"OlympApi/api"
+	"OlympApi/olympapi"
 	"fmt"
 	"net/http"
 
@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	api := api.GetApi()
+	api := olympapi.GetApi()
 
 	//start the HTTP and redirect all requests to HTTPS
 	go func() {

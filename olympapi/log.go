@@ -1,10 +1,10 @@
-package api
+package olympapi
 
 import (
 	"OlympApi/models"
 	"net/http"
 
-	"Olympapi/database"
+	"Olympapi/apidatabase"
 
 	"github.com/go-martini/martini"
 )
@@ -12,7 +12,7 @@ import (
 func getLogger() martini.Handler {
 	return func(r *http.Request) {
 		var requestModel *models.Request = getRequestObject(r)
-		database.WriteRequestToDB(requestModel)
+		apidatabase.WriteRequestToDB(requestModel)
 	}
 }
 

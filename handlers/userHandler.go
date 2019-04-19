@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"OlympApi/database"
+	"OlympApi/apidatabase"
 	"OlympApi/models"
 
 	"github.com/go-martini/martini"
@@ -18,8 +18,8 @@ func GetRequestObject(rq *http.Request) *models.Request {
 	return request
 }
 
-func GetUserDatabase() *database.UserDB {
-	userDB := database.UserDB{}
+func GetUserDatabase() *apidatabase.UserDB {
+	userDB := apidatabase.UserDB{}
 	userDB.OpenConnection()
 	return &userDB
 }
@@ -62,7 +62,6 @@ func GetUserJsonByID(rq *http.Request, params martini.Params) (int, string) {
 
 func GetAllUsersJson(rq *http.Request, params martini.Params) (int, string) {
 	request := GetRequestObject(rq)
-	defer database.WriteRequestToDB(request)
 
 	userDB := GetUserDatabase()
 	users, err := userDB.GetAllUsers()
@@ -83,7 +82,6 @@ func GetAllUsersJson(rq *http.Request, params martini.Params) (int, string) {
 
 func CreateNewUserRecord(rq *http.Request, params martini.Params) (int, string) {
 	request := GetRequestObject(rq)
-	defer database.WriteRequestToDB(request)
 
 	var newUser models.User
 	err := json.Unmarshal(([]byte)((*request).Body), &newUser)

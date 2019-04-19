@@ -1,4 +1,4 @@
-package api
+package olympapi
 
 import (
 	"net/http"

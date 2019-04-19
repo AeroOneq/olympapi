@@ -1,4 +1,4 @@
-package database
+package apidatabase
 
 import (
 	"database/sql"
