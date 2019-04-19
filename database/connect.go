@@ -2,8 +2,6 @@ package database
 
 import (
 	"database/sql"
-
-	_ "github.com/denisenkom/go-mssqldb"
 )
 
 var connectionString string = ""

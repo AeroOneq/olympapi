@@ -1,11 +1,10 @@
 package database
 
 import (
+	"OlympApi/models"
 	"database/sql"
 	"encoding/json"
 	"fmt"
-
-	"../models"
 )
 
 type ErrorDB struct {

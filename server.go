@@ -1,10 +1,9 @@
 package main
 
 import (
+	"OlympApi/api"
 	"fmt"
 	"net/http"
-
-	"./api"
 )
 
 func main() {

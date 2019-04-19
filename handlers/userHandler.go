@@ -5,8 +5,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"../database"
-	"../models"
+	"OlympApi/database"
+	"OlympApi/models"
+
 	"github.com/go-martini/martini"
 )
 

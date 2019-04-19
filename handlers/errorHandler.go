@@ -1,7 +1,7 @@
 package handlers
 
-import "../models"
-import "../database"
+import "OlympApi/database"
+import "OlympApi/models"
 
 func HandleError(rq *models.Request, errorStr string) {
 	reqErr := &models.RequestError{

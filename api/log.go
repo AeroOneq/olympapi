@@ -1,10 +1,11 @@
 package api
 
 import (
+	"OlympApi/models"
 	"net/http"
 
-	"../database"
-	"../models"
+	"Olympapi/database"
+
 	"github.com/go-martini/martini"
 )
 

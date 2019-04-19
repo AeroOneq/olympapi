@@ -3,7 +3,7 @@ package database
 import (
 	"database/sql"
 
-	"../models"
+	"OlympApi/models"
 )
 
 type UserDB struct {

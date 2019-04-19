@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"../models"
+	"OlympApi/models"
 )
 
 func WriteRequestToDB(request *models.Request) {

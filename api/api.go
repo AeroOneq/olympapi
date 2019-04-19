@@ -3,7 +3,8 @@ package api
 import (
 	"net/http"
 
-	"../handlers"
+	"Olympapi/handlers"
+
 	"github.com/go-martini/martini"
 	"github.com/martini-contrib/secure"
 )
